@@ -3,7 +3,7 @@
 , stdenvNoCC
 , unzip
 , zip
-, jre_headless
+, graalvm-ce
 , loaderName
 , loaderVersion
 , gameVersion
@@ -23,7 +23,7 @@ in
 stdenvNoCC.mkDerivation {
   pname = "${loaderName}-server-launch.jar";
   version = "${loaderName}-${loaderVersion}-${gameVersion}";
-  nativeBuildInputs = [ unzip zip jre_headless ];
+  nativeBuildInputs = [ unzip zip graalvm-ce ];
 
   libraries = fetchedLibraries;
 
